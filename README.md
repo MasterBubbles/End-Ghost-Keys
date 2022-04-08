@@ -16,7 +16,9 @@ What this basically means, is that for each macro, you will have 2 macros. When 
 
 Step 1: Copy/paste this command in the terminal:
 
-```nano macro_adjuster.sh```
+```
+nano macro_adjuster.sh
+```
 
 Then paste these lines, and validate with `CTRL+O`, `Enter`, then `CTRL+X`:
 
@@ -70,7 +72,9 @@ Step 2: Now you need to create a copy of your keyremap.ini and rename it 'keys.i
 
 To do so, simply use the command below:
 
-`nano keys.ini`
+```
+nano keys.ini
+```
 
 Then paste the content of your `keyremap.ini`, and validate with `CTRL+O`, `Enter`, then `CTRL+X`
 
@@ -101,11 +105,14 @@ combo=1d,0,0|2a,0,0|31,0,0|31,0,1|2a,0,1|1d,0,1
 
 Step 3: Now that the script and the input file are in the same folder, you can execute the script with the command below. It needs to be executed once per macro:
 
-```sh macro_adjuster.sh```
+```
+sh macro_adjuster.sh
+```
 
 So as in this example if you have 5 macros (which should be 20 lines in the input file), run the script 5 times:
 
-```sh macro_adjuster.sh
+```
+sh macro_adjuster.sh
 sh macro_adjuster.sh
 sh macro_adjuster.sh
 sh macro_adjuster.sh
@@ -116,7 +123,9 @@ sh macro_adjuster.sh
 
 View the result with this command:
 
-`cat output_keys.ini`
+```
+cat output_keys.ini
+```
 
 ```ini
 [ID75_INC_assignments_txt_file_D]
