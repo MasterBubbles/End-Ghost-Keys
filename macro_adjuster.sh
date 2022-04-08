@@ -4,32 +4,25 @@
 head -n 1 keys.ini > line1D
 head -n 1 keys.ini > line1U
 sed -i '1d' keys.ini
-
 head -n 1 keys.ini > line2D
 head -n 1 keys.ini > line2U
 sed -i '1d' keys.ini
-
 head -n 1 keys.ini > line3D
 head -n 1 keys.ini > line3U
 sed -i '1d' keys.ini
-
 head -n 1 keys.ini > line4D
 sed -i '1d' keys.ini
 
 # Creating 2 new macros (one for event DOWN and one for event UP)
-
 sed -i 's/..$//' line1D
 sed -i 's/$/_D]/' line1D
-
 sed -i 's/..$//' line1U
 sed -i 's/$/_U]/' line1U
 
 # Replacing trigger with +1 at last number for UP event macro
-
 str0=`cat line3U`
 str1=`echo $str0 | sed -e 's/.*\(..\)$/\1/'`
 str1=$(echo "$str1" | tr -d $'\r')
-
 line3Ux=`sed 's/..$//' line3U`
 line3Uy=`echo 1+"$str1" | bc`
 echo "$line3Ux$line3Uy" > line3U
