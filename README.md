@@ -74,7 +74,7 @@ To do so, simply use the command below:
 
 Then paste the content of your `keyremap.ini`, and validate with `CTRL+O`, `Enter`, then `CTRL+X`
 
-Here is what your 'keys.ini' file should look like
+Here is what your `keys.ini` file should look like
 
 ```ini
 [ID75_INC_assignments_txt_file]
