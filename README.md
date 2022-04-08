@@ -3,10 +3,10 @@ Putting an end the haunting ghost keys (CTRL, ALT and SHIFT) when using Oblitum'
 
 The script 'macro_adjuster.sh' is baskically a modification of the keyremap.ini from Interception, in order to turn 1 macro into 2 macros:
 - The first macro will send your initial key combo when pressing down your initial key trigger ->
-*the only modification will be adding* `_D` *at the end of the macro's name (first line)*
+*the only modification will be adding* `_D` *at the end of the macro's name (1st line)*
 
 - The second macro will be making sure there are no ghost keys, by sending UP events for CTRL|ALT|SHIFT (left and right) when releasing your trigger key ->
-*adding* `_U` *at the end of the name, adding +1 on the last digit of the 3rd line (trigger key's ID), and replacing combo with*: `2a,0,1|36,0,1|38,0,1|38,0,3|1d,0,1|1d,0,3|`
+*adding* `_U` *at the end of the name (1st line), adding +1 on the last digit of the trigger key's ID (3rd line), and replacing combo with*: `2a,0,1|36,0,1|38,0,1|38,0,3|1d,0,1|1d,0,3|` *(4th line)*
 
 What this basically means, is that for each macro, you will have 2 macros. When pressing down your key trigger, it will use the initial combo you created in Interception, but when you let go of the key, it will make sure the SHIFT, ALT and CTRL keys (left and right) have been fully released as well.
 
