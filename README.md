@@ -1,7 +1,7 @@
 # End-Ghost-Keys
 Putting an end the haunting ghost keys (CTRL, ALT and SHIFT) when using Oblitum's Interception
 
-The script 'macro_adjuster.sh' is baskically a modification of the keyremap.ini from Interception, in order to turn 1 macro into 2 macros:
+The script `macro_adjuster.sh` is basically a tool to edit the `keyremap.ini` from Interception, and to turn 1 macro into 2 macros:
 - The first macro will send your initial key combo when pressing down your initial key trigger ->
 *the only modification will be adding* `_D` *at the end of the macro's name (1st line)*
 
