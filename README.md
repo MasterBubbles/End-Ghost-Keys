@@ -12,7 +12,7 @@ What this basically means, is that for each macro, you will have 2 macros. When 
 
 # How to use it
 
-> Note that I use Interception in Windows, but used bash (Linux) to make this script. I am sorry for those who don't have a linux terminal, but I didn't know how to do this with the tools provided in Windows. My solution for Windows only users would be to install Ubuntu 20.04 LTS from the Microsoft Store, and follow the tutorial below with the Ubuntu terminal (you will need to enable the Windows subsystem for Linux and reboot first).
+> Note that Interception is used in Windows, but this is a bash script (Linux). I am sorry for those who don't have a linux terminal, but I didn't know how to do this with the tools provided in Windows. My solution for Windows only users would be to install Ubuntu 20.04 LTS from the Microsoft Store, and follow the tutorial below with the Ubuntu terminal (you will need to enable the Windows subsystem for Linux and reboot first). Or else, you could simply SSH into a linux machine to operate the script, and bring the result back to your Windows machine.
 
 Step 1: Copy/paste this command in the terminal:
 
