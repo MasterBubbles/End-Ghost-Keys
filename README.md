@@ -1,13 +1,14 @@
 # End-Ghost-Keys
-Put an end the haunting ghost keys (CTRL, ALT and SHIFT) when using Oblitum's Interception
+Putting an end the haunting ghost keys (CTRL, ALT and SHIFT) when using Oblitum's Interception
 
 The script 'macro_adjuster.sh' is baskically a modification of the keyremap.ini from Interception, in order to turn 1 macro into 2 macros:
-- The first macro will be your initial key trigger and your initial key combo, the only modification will be adding '_D' at the end of the macro's name (first line).
-- The second macro will be for the event UP of the same trigger key -> adding +1 on the last digit of the 3rd line, replacing combo with ShiftUp|AltUp|CtrlUp, and adding '_U' at the end of the name
+- The first macro will send your initial key combo when pressing down your initial key trigger ->
+*the only modification will be adding '_D' at the end of the macro's name (first line)*
 
-What this basically means, is that for each macro, you will have 2 macros. When pressing down your key trigger, it will use the initial combo you created in Interception, but when you let go of the key, it will make sure the SHIFT, ALT and CTRL keys (left and right) have been fully released as well:
+- The second macro will be making sure there are no ghost keys, by sending UP events for CTRL|ALT|SHIFT (left and right) when releasing your trigger key ->
+*adding '_U' at the end of the name, adding +1 on the last digit of the 3rd line (trigger key's ID), and replacing combo with "2a,0,1|36,0,1|38,0,1|38,0,3|1d,0,1|1d,0,3|"*
 
->combo=2a,0,1|36,0,1||38,0,1|38,0,3|1d,0,1|1d,0,3
+What this basically means, is that for each macro, you will have 2 macros. When pressing down your key trigger, it will use the initial combo you created in Interception, but when you let go of the key, it will make sure the SHIFT, ALT and CTRL keys (left and right) have been fully released as well.
 
 # How to use it
 
@@ -49,7 +50,7 @@ line3Uy=`echo 1+"$str1" | bc`
 echo "$line3Ux$line3Uy" > line3U
 
 # Replacing UP event with ShiftUp,AltUp,CtrlUp
-echo "combo=2a,0,1|36,0,1||38,0,1|38,0,3|1d,0,1|1d,0,3|" > line4U
+echo "combo=2a,0,1|36,0,1|38,0,1|38,0,3|1d,0,1|1d,0,3|" > line4U
 
 # Creating the output file if it doesn't already exist
 touch output_keys.ini
