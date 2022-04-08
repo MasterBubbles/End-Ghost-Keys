@@ -18,7 +18,7 @@ Step 1: Copy/paste this command in the terminal:
 
 ```nano macro_adjuster.sh```
 
-Then paste these lines, and validate with CTRL+O, Enter, then CTRL+X:
+Then paste these lines, and validate with `CTRL+O`, `Enter`, then `CTRL+X`:
 
 ```sh
 #!/bin/bash
@@ -68,9 +68,11 @@ cat line4U >> output_keys.ini
 
 Step 2: Now you need to create a copy of your keyremap.ini and rename it 'keys.ini' (I have purposefully changed it so you would not apply the script on the original .ini file, always keep backups!)
 
-To do so, simply use the command below, then paste the content of your keyremap.ini, and validate with CTRL+O, Enter, then CTRL+X:
+To do so, simply use the command below:
 
-```nano keys.ini```
+`nano keys.ini`
+
+Then paste the content of your `keyremap.ini`, and validate with `CTRL+O`, `Enter`, then `CTRL+X`
 
 Here is what your 'keys.ini' file should look like
 
