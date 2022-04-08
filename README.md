@@ -101,14 +101,9 @@ Step 3: Now that the script and the input file are in the same folder, you can e
 
 ```sh macro_adjuster.sh```
 
-So for example if you have 10 macros (which should be 40 lines in input file), use 10 times this command:
+So as in this example if you have 5 macros (which should be 20 lines in the input file), run the script 5 times:
 
 ```sh macro_adjuster.sh
-sh macro_adjuster.sh
-sh macro_adjuster.sh
-sh macro_adjuster.sh
-sh macro_adjuster.sh
-sh macro_adjuster.sh
 sh macro_adjuster.sh
 sh macro_adjuster.sh
 sh macro_adjuster.sh
