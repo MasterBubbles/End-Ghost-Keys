@@ -129,7 +129,7 @@ combo=1d,0,0|2a,0,0|3e,0,0|3e,0,1|2a,0,1|1d,0,1
 [ID75_INC_assignments_txt_file_U]
 device=HID\VID_6964&PID_0075&REV_0001&MI_00
 trigger=6,0,1
-combo=2a,0,1|36,0,1||38,0,1|38,0,3|1d,0,1|1d,0,3|
+combo=2a,0,1|36,0,1|38,0,1|38,0,3|1d,0,1|1d,0,3|
 [ID75_SN_File_D]
 device=HID\VID_6964&PID_0075&REV_0001&MI_00
 trigger=12,0,0
@@ -137,7 +137,7 @@ combo=1d,0,0|2a,0,0|3f,0,0|3f,0,1|2a,0,1|1d,0,1
 [ID75_SN_File_U]
 device=HID\VID_6964&PID_0075&REV_0001&MI_00
 trigger=12,0,1
-combo=2a,0,1|36,0,1||38,0,1|38,0,3|1d,0,1|1d,0,3|
+combo=2a,0,1|36,0,1|38,0,1|38,0,3|1d,0,1|1d,0,3|
 [ID75_Focus_Remedy_D]
 device=HID\VID_6964&PID_0075&REV_0001&MI_00
 trigger=1d,0,0
@@ -145,7 +145,7 @@ combo=1d,0,0|2a,0,0|26,0,0|26,0,1|2a,0,1|1d,0,1
 [ID75_Focus_Remedy_U]
 device=HID\VID_6964&PID_0075&REV_0001&MI_00
 trigger=1d,0,1
-combo=2a,0,1|36,0,1||38,0,1|38,0,3|1d,0,1|1d,0,3|
+combo=2a,0,1|36,0,1|38,0,1|38,0,3|1d,0,1|1d,0,3|
 [ID75_Focus_AD_D]
 device=HID\VID_6964&PID_0075&REV_0001&MI_00
 trigger=5b,0,2
@@ -153,7 +153,7 @@ combo=1d,0,0|2a,0,0|27,0,0|27,0,1|2a,0,1|1d,0,1
 [ID75_Focus_AD_U]
 device=HID\VID_6964&PID_0075&REV_0001&MI_00
 trigger=5b,0,3
-combo=2a,0,1|36,0,1||38,0,1|38,0,3|1d,0,1|1d,0,3|
+combo=2a,0,1|36,0,1|38,0,1|38,0,3|1d,0,1|1d,0,3|
 [ID75_Focus_SCCM_Console_D]
 device=HID\VID_6964&PID_0075&REV_0001&MI_00
 trigger=38,0,0
@@ -161,7 +161,7 @@ combo=1d,0,0|2a,0,0|31,0,0|31,0,1|2a,0,1|1d,0,1
 [ID75_Focus_SCCM_Console_U]
 device=HID\VID_6964&PID_0075&REV_0001&MI_00
 trigger=38,0,1
-combo=2a,0,1|36,0,1||38,0,1|38,0,3|1d,0,1|1d,0,3|
+combo=2a,0,1|36,0,1|38,0,1|38,0,3|1d,0,1|1d,0,3|
 ```
 
 Then, you can copy/paste the result back into your original `keyremap.ini` (make sure to have backups of this file!)
