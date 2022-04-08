@@ -114,7 +114,7 @@ sh macro_adjuster.sh
 
 View the result with this command:
 
-> cat output_keys.ini
+`cat output_keys.ini`
 
 ```ini
 [ID75_INC_assignments_txt_file_D]
