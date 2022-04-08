@@ -66,9 +66,9 @@ cat line3U >> output_keys.ini
 cat line4U >> output_keys.ini
 ```
 
-Step 2: Create a copy of your keyremap.ini and rename it 'keys.ini' (I have purposefully changed it so you would not apply the script on the original .ini file, always keep backups!)
+Step 2: Now you need to create a copy of your keyremap.ini and rename it 'keys.ini' (I have purposefully changed it so you would not apply the script on the original .ini file, always keep backups!)
 
-Use this command, then paste the content of your keyremap.ini, and validate with CTRL+O, Enter, then CTRL+X:
+To do so, simply use the command below, then paste the content of your keyremap.ini, and validate with CTRL+O, Enter, then CTRL+X:
 
 ```nano keys.ini```
 
