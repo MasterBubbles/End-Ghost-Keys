@@ -164,4 +164,8 @@ trigger=38,0,1
 combo=2a,0,1|36,0,1||38,0,1|38,0,3|1d,0,1|1d,0,3|
 ```
 
+Then, you can copy/paste the result back into your original keyremap.ini (make sure to have backups of this file!)
+
+If you're adding new macros in the future and need to run the script again, only input the new macros in keys.ini instead of the entire keyremap.ini, and then replace them with the output.
+
 And that's it! Now each time you release one of your trigger keys, it will always ensure these ghost keys never haunt you...
