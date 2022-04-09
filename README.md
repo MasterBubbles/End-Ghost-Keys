@@ -29,18 +29,17 @@ Then paste these lines:
 ```bash
 #!/bin/bash
 
-# Generating lines from input file and deleting them
+# Injecting lines into variables and deleting them from the input file
 line1D=`head -n 1 keys.ini` && line1U=`head -n 1 keys.ini` && sed -i '1d' keys.ini
 line2D=`head -n 1 keys.ini` && line2U=`head -n 1 keys.ini` && sed -i '1d' keys.ini
 line3D=`head -n 1 keys.ini` && line3U=`head -n 1 keys.ini` && sed -i '1d' keys.ini
-line4D=`head -n 1 keys.ini` && sed -i '1d' keys.ini
-line4U="combo=2a,0,1|36,0,1|38,0,1|38,0,3|1d,0,1|1d,0,3"
+line4D=`head -n 1 keys.ini` && line4U="combo=2a,0,1|36,0,1|38,0,1|38,0,3|1d,0,1|1d,0,3" && sed -i '1d' keys.ini
 
-# Creating 2 new macros (one for event DOWN and one for event UP)
+# Modifying the names of the 2 macros using the original name (adding _D and _U)
 line1D=`sed 's/..$//' <<< $line1D` && line1D=`sed 's/$/_D]/' <<< $line1D`
 line1U=`sed 's/..$//' <<< $line1U` && line1U=`sed 's/$/_U]/' <<< $line1U`
 
-# Replacing trigger with +1 at last number for UP event macro
+# Replacing trigger key ID with +1 on last digit for UP event macro
 str=`sed -e 's/.*\(..\)$/\1/' <<< $line3U | tr -d $'\r'`
 x=`sed 's/..$//' <<< $line3U`
 y=`echo 1+"$str" | bc`
@@ -58,6 +57,9 @@ echo $line1U >> output_keys.ini
 echo $line2U >> output_keys.ini
 echo $line3U >> output_keys.ini
 echo $line4U >> output_keys.ini
+
+# Show last 8 lines of output file
+tail -8 output_keys.ini
 ```
 
 Then, save the file with `CTRL+O`, `Enter`, and `CTRL+X`
