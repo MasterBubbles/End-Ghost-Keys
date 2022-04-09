@@ -21,9 +21,9 @@ sed -i 's/$/_U]/' line1U
 
 # Replacing trigger with +1 at last number for UP event macro
 str=$(cat line3U | sed -e 's/.*\(..\)$/\1/' | tr -d $'\r')
-line3Ux=`sed 's/..$//' line3U`
-line3Uy=`echo 1+"$str" | bc`
-echo "$line3Ux$line3Uy" > line3U
+x=`sed 's/..$//' line3U`
+y=`echo 1+"$str" | bc`
+echo "$x$y" > line3U
 
 # Replacing UP event with ShiftUp,AltUp,CtrlUp
 echo "combo=2a,0,1|36,0,1|38,0,1|38,0,3|1d,0,1|1d,0,3" > line4U
