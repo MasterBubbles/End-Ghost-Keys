@@ -6,7 +6,7 @@ The script `endghostkeys.sh` is basically a tool to edit the `keyremap.ini` from
 *the only modification will be adding* `_D` *at the end of the macro's name (1st line)*
 
 - The second macro will be making sure there are no ghost keys, by sending UP events for CTRL|ALT|SHIFT (left and right) when releasing your trigger key ->
-*adding* `_U` *at the end of the name (1st line), adding +1 on the last digit of the trigger key's ID (3rd line), and it will be using this combo*: `2a,0,1|36,0,1|38,0,1|38,0,3|1d,0,1|1d,0,3|` *(4th line)*
+*adding* `_U` *at the end of the name (1st line), adding +1 on the last digit of the trigger key's ID (3rd line), and it will be using this combo*: `2a,0,1|36,0,1|38,0,1|38,0,3|1d,0,1|1d,0,3` *(4th line)*
 
 What this basically means, is that for each macro, you will have 2 macros. When pressing down your key trigger, it will use the initial combo you created in Interception, but when you let go of the key, it will make sure the SHIFT, ALT and CTRL keys (left and right) have been fully released afterwards.
 
@@ -56,7 +56,7 @@ line3Uy=`echo 1+"$str1" | bc`
 echo "$line3Ux$line3Uy" > line3U
 
 # Replacing UP event with ShiftUp,AltUp,CtrlUp
-echo "combo=2a,0,1|36,0,1|38,0,1|38,0,3|1d,0,1|1d,0,3|" > line4U
+echo "combo=2a,0,1|36,0,1|38,0,1|38,0,3|1d,0,1|1d,0,3" > line4U
 
 # Creating the output file if it doesn't already exist
 touch output_keys.ini
@@ -145,7 +145,7 @@ combo=1d,0,0|2a,0,0|3e,0,0|3e,0,1|2a,0,1|1d,0,1
 [ID75_INC_assignments_txt_file_U]
 device=HID\VID_6964&PID_0075&REV_0001&MI_00
 trigger=6,0,1
-combo=2a,0,1|36,0,1|38,0,1|38,0,3|1d,0,1|1d,0,3|
+combo=2a,0,1|36,0,1|38,0,1|38,0,3|1d,0,1|1d,0,3
 [ID75_SN_File_D]
 device=HID\VID_6964&PID_0075&REV_0001&MI_00
 trigger=12,0,0
@@ -153,7 +153,7 @@ combo=1d,0,0|2a,0,0|3f,0,0|3f,0,1|2a,0,1|1d,0,1
 [ID75_SN_File_U]
 device=HID\VID_6964&PID_0075&REV_0001&MI_00
 trigger=12,0,1
-combo=2a,0,1|36,0,1|38,0,1|38,0,3|1d,0,1|1d,0,3|
+combo=2a,0,1|36,0,1|38,0,1|38,0,3|1d,0,1|1d,0,3
 [ID75_Focus_Remedy_D]
 device=HID\VID_6964&PID_0075&REV_0001&MI_00
 trigger=1d,0,0
@@ -161,7 +161,7 @@ combo=1d,0,0|2a,0,0|26,0,0|26,0,1|2a,0,1|1d,0,1
 [ID75_Focus_Remedy_U]
 device=HID\VID_6964&PID_0075&REV_0001&MI_00
 trigger=1d,0,1
-combo=2a,0,1|36,0,1|38,0,1|38,0,3|1d,0,1|1d,0,3|
+combo=2a,0,1|36,0,1|38,0,1|38,0,3|1d,0,1|1d,0,3
 [ID75_Focus_AD_D]
 device=HID\VID_6964&PID_0075&REV_0001&MI_00
 trigger=5b,0,2
@@ -169,7 +169,7 @@ combo=1d,0,0|2a,0,0|27,0,0|27,0,1|2a,0,1|1d,0,1
 [ID75_Focus_AD_U]
 device=HID\VID_6964&PID_0075&REV_0001&MI_00
 trigger=5b,0,3
-combo=2a,0,1|36,0,1|38,0,1|38,0,3|1d,0,1|1d,0,3|
+combo=2a,0,1|36,0,1|38,0,1|38,0,3|1d,0,1|1d,0,3
 [ID75_Focus_SCCM_Console_D]
 device=HID\VID_6964&PID_0075&REV_0001&MI_00
 trigger=38,0,0
@@ -177,7 +177,7 @@ combo=1d,0,0|2a,0,0|31,0,0|31,0,1|2a,0,1|1d,0,1
 [ID75_Focus_SCCM_Console_U]
 device=HID\VID_6964&PID_0075&REV_0001&MI_00
 trigger=38,0,1
-combo=2a,0,1|36,0,1|38,0,1|38,0,3|1d,0,1|1d,0,3|
+combo=2a,0,1|36,0,1|38,0,1|38,0,3|1d,0,1|1d,0,3
 ```
 
 Then, you can copy/paste the result back into your original `keyremap.ini` (make sure to have backups of this file!)
