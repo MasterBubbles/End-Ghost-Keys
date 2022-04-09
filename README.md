@@ -77,7 +77,7 @@ Then paste the full content of your `keyremap.ini` (or only specific macros, for
 Here is what your `keys.ini` file should look like
 
 ```ini
-[ID75_INC_assignments_txt_file]
+[ID75_INC_assignments]
 device=HID\VID_6964&PID_0075&REV_0001&MI_00
 trigger=6,0,0
 combo=1d,0,0|2a,0,0|3e,0,0|3e,0,1|2a,0,1|1d,0,1
@@ -124,11 +124,11 @@ cat output_keys.ini
 ```
 
 ```ini
-[ID75_INC_assignments_txt_file_D]
+[ID75_INC_assignments_D]
 device=HID\VID_6964&PID_0075&REV_0001&MI_00
 trigger=6,0,0
 combo=1d,0,0|2a,0,0|3e,0,0|3e,0,1|2a,0,1|1d,0,1
-[ID75_INC_assignments_txt_file_U]
+[ID75_INC_assignments_U]
 device=HID\VID_6964&PID_0075&REV_0001&MI_00
 trigger=6,0,1
 combo=2a,0,1|36,0,1|38,0,1|38,0,3|1d,0,1|1d,0,3
