@@ -20,11 +20,9 @@ sed -i 's/..$//' line1U
 sed -i 's/$/_U]/' line1U
 
 # Replacing trigger with +1 at last number for UP event macro
-str0=`cat line3U`
-str1=`echo $str0 | sed -e 's/.*\(..\)$/\1/'`
-str1=$(echo "$str1" | tr -d $'\r')
+str=$(cat line3U | sed -e 's/.*\(..\)$/\1/' | tr -d $'\r')
 line3Ux=`sed 's/..$//' line3U`
-line3Uy=`echo 1+"$str1" | bc`
+line3Uy=`echo 1+"$str" | bc`
 echo "$line3Ux$line3Uy" > line3U
 
 # Replacing UP event with ShiftUp,AltUp,CtrlUp
