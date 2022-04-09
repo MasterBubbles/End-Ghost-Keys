@@ -8,7 +8,7 @@ The script `endghostkeys.sh` is basically a tool to edit the `keyremap.ini` from
 - The second macro will be making sure there are no ghost keys, by sending UP events for CTRL|ALT|SHIFT (left and right) when releasing your trigger key ->
 *adding* `_U` *at the end of the name (1st line), adding +1 on the last digit of the trigger key's ID (3rd line), and it will be using this combo*: `2a,0,1|36,0,1|38,0,1|38,0,3|1d,0,1|1d,0,3` *(4th line)*
 
-What this basically means, is that for each macro, you will have 2 macros. When pressing down your key trigger, it will use the initial combo you created in Interception, but when you let go of the key, it will make sure the SHIFT, ALT and CTRL keys (left and right) have been fully released afterwards.
+What this basically means, is that for each macro, you will have 2 macros. When pressing down your trigger key, it will use the initial combo you created in Interception, but when you let go of the key, it will make sure the SHIFT, ALT and CTRL keys (left and right) have been fully released afterwards.
 
 # How to use it
 
