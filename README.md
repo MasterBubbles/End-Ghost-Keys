@@ -188,6 +188,6 @@ After finalizing all these steps, restart Interception, apply your filters, and 
 
 --------
 
-And then, don't forget to have fun with your keyboards! ;-)
+Also, don't forget to have fun! ;-)
 
 ![Idobo ID75](https://raw.githubusercontent.com/MasterBubbles/End-Ghost-Keys/main/ID75.jpg)
