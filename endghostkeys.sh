@@ -28,7 +28,7 @@ line3Uy=`echo 1+"$str1" | bc`
 echo "$line3Ux$line3Uy" > line3U
 
 # Replacing UP event with ShiftUp,AltUp,CtrlUp
-echo "combo=2a,0,1|36,0,1|38,0,1|38,0,3|1d,0,1|1d,0,3|" > line4U
+echo "combo=2a,0,1|36,0,1|38,0,1|38,0,3|1d,0,1|1d,0,3" > line4U
 
 # Creating the output file if it doesn't already exist
 touch output_keys.ini
