@@ -33,7 +33,8 @@ Then paste these lines:
 line1D=`head -n 1 keys.ini` && line1U=`head -n 1 keys.ini` && sed -i '1d' keys.ini
 line2D=`head -n 1 keys.ini` && line2U=`head -n 1 keys.ini` && sed -i '1d' keys.ini
 line3D=`head -n 1 keys.ini` && line3U=`head -n 1 keys.ini` && sed -i '1d' keys.ini
-line4D=`head -n 1 keys.ini` && line4U="combo=2a,0,1|36,0,1|38,0,1|38,0,3|1d,0,1|1d,0,3" && sed -i '1d' keys.ini
+line4D=`head -n 1 keys.ini` && sed -i '1d' keys.ini
+line4U="combo=2a,0,1|36,0,1|38,0,1|38,0,3|1d,0,1|1d,0,3"
 
 # Creating 2 new macros (one for event DOWN and one for event UP)
 line1D=`sed 's/..$//' <<< $line1D` && line1D=`sed 's/$/_D]/' <<< $line1D`
