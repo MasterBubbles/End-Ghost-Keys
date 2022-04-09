@@ -1,7 +1,7 @@
 # End-Ghost-Keys
 Putting an end the haunting ghost keys (CTRL, ALT and SHIFT) when using Oblitum's Interception
 
-The script `macro_adjuster.sh` is basically a tool to edit the `keyremap.ini` from Interception, and to turn 1 macro into 2 macros:
+The script `endghostkeys.sh` is basically a tool to edit the `keyremap.ini` from Interception, and to turn 1 macro into 2 macros:
 - The first macro will send your initial key combo when pressing down your initial key trigger ->
 *the only modification will be adding* `_D` *at the end of the macro's name (1st line)*
 
@@ -21,7 +21,7 @@ What this basically means, is that for each macro, you will have 2 macros. When 
 **Step 1**: Copy/paste this command in the terminal to create the script file:
 
 ```
-nano macro_adjuster.sh
+nano endghostkeys.sh
 ```
 
 Then paste these lines:
@@ -114,17 +114,17 @@ Then, save the file using `CTRL+O`, `Enter`, and `CTRL+X`
 **Step 3**: Now that the script and the input file are in the same folder, you can execute the script with the command below. It needs to be executed once per macro:
 
 ```
-sh macro_adjuster.sh
+sh endghostkeys.sh
 ```
 
 So as in this example if you have 5 macros (which should be 20 lines in the input file), run the script 5 times:
 
 ```
-sh macro_adjuster.sh
-sh macro_adjuster.sh
-sh macro_adjuster.sh
-sh macro_adjuster.sh
-sh macro_adjuster.sh
+sh endghostkeys.sh
+sh endghostkeys.sh
+sh endghostkeys.sh
+sh endghostkeys.sh
+sh endghostkeys.sh
 ```
 
 # What the `output_keys.ini` file should look like
