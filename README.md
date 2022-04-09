@@ -127,6 +127,8 @@ sh endghostkeys.sh
 sh endghostkeys.sh
 ```
 
+If you are unsure on this step, simply divide the amount of lines in `keys.ini` by 4, and it will tell you how many times you should run it.
+
 # What the `output_keys.ini` file should look like
 
 View the result with this command:
