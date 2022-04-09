@@ -26,40 +26,37 @@ nano endghostkeys.sh
 
 Then paste these lines:
 
-```sh
+```bash
 #!/bin/bash
 
-# Recuperating lines from input file and deleting them
-head -n 1 keys.ini > line1D && head -n 1 keys.ini > line1U && sed -i '1d' keys.ini
-head -n 1 keys.ini > line2D && head -n 1 keys.ini > line2U && sed -i '1d' keys.ini
-head -n 1 keys.ini > line3D && head -n 1 keys.ini > line3U && sed -i '1d' keys.ini
-head -n 1 keys.ini > line4D && sed -i '1d' keys.ini
-
-# Replacing UP event with ShiftUp,AltUp,CtrlUp
-echo "combo=2a,0,1|36,0,1|38,0,1|38,0,3|1d,0,1|1d,0,3" > line4U
+# Generating lines from input file and deleting them
+line1D=`head -n 1 keys.ini` && line1U=`head -n 1 keys.ini` && sed -i '1d' keys.ini
+line2D=`head -n 1 keys.ini` && line2U=`head -n 1 keys.ini` && sed -i '1d' keys.ini
+line3D=`head -n 1 keys.ini` && line3U=`head -n 1 keys.ini` && sed -i '1d' keys.ini
+line4D=`head -n 1 keys.ini` && line4U="combo=2a,0,1|36,0,1|38,0,1|38,0,3|1d,0,1|1d,0,3" && sed -i '1d' keys.ini
 
 # Creating 2 new macros (one for event DOWN and one for event UP)
-sed -i 's/..$//' line1D && sed -i 's/$/_D]/' line1D
-sed -i 's/..$//' line1U && sed -i 's/$/_U]/' line1U
+line1D=`sed 's/..$//' <<< $line1D` && line1D=`sed 's/$/_D]/' <<< $line1D`
+line1U=`sed 's/..$//' <<< $line1U` && line1U=`sed 's/$/_U]/' <<< $line1U`
 
 # Replacing trigger with +1 at last number for UP event macro
-str=$(cat line3U | sed -e 's/.*\(..\)$/\1/' | tr -d $'\r')
-x=`sed 's/..$//' line3U`
+str=`sed -e 's/.*\(..\)$/\1/' <<< $line3U | tr -d $'\r'`
+x=`sed 's/..$//' <<< $line3U`
 y=`echo 1+"$str" | bc`
-echo "$x$y" > line3U
+line3U=`echo "$x$y"`
 
 # Creating the output file if it doesn't already exist
 touch output_keys.ini
 
 # Output each line individually
-cat line1D >> output_keys.ini
-cat line2D >> output_keys.ini
-cat line3D >> output_keys.ini
-cat line4D >> output_keys.ini
-cat line1U >> output_keys.ini
-cat line2U >> output_keys.ini
-cat line3U >> output_keys.ini
-cat line4U >> output_keys.ini
+echo $line1D >> output_keys.ini
+echo $line2D >> output_keys.ini
+echo $line3D >> output_keys.ini
+echo $line4D >> output_keys.ini
+echo $line1U >> output_keys.ini
+echo $line2U >> output_keys.ini
+echo $line3U >> output_keys.ini
+echo $line4U >> output_keys.ini
 ```
 
 Then, save the file with `CTRL+O`, `Enter`, and `CTRL+X`
@@ -104,17 +101,17 @@ Then, save the file using `CTRL+O`, `Enter`, and `CTRL+X`
 **Step 3**: Now that the script and the input file are in the same folder, you can execute the script with the command below. It needs to be executed once per macro:
 
 ```
-sh endghostkeys.sh
+bash ./endghostkeys.sh
 ```
 
 So as in this example if you have 5 macros (which should be 20 lines in the input file), run the script 5 times:
 
 ```
-sh endghostkeys.sh
-sh endghostkeys.sh
-sh endghostkeys.sh
-sh endghostkeys.sh
-sh endghostkeys.sh
+bash ./endghostkeys.sh
+bash ./endghostkeys.sh
+bash ./endghostkeys.sh
+bash ./endghostkeys.sh
+bash ./endghostkeys.sh
 ```
 
 If you are unsure on this step, simply divide the amount of lines in `keys.ini` by 4, and it will tell you how many times you should run it.
