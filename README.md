@@ -185,3 +185,9 @@ Then, you can copy/paste the result back into your original `keyremap.ini` (make
 If you're adding new macros in the future and need to run the script again, only input the new macros in `keys.ini` instead of the entire `keyremap.ini`, and then replace them with the output.
 
 After finalizing all these steps, restart Interception, apply your filters, and that's it! Now each time a trigger key is released, it will always ensure none of these ghost keys ever haunt you...
+
+--------
+
+And then, don't forget to have fun with your keyboards! ;-)
+
+![Idobo ID75](https://raw.githubusercontent.com/MasterBubbles/End-Ghost-Keys/main/ID75.jpg)
