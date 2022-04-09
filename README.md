@@ -12,15 +12,19 @@ What this basically means, is that for each macro, you will have 2 macros. When 
 
 # How to use it
 
-> Note that this is a bash script (Linux). The script must be run in a linux terminal before bringing the result back to your Windows machine. I am sorry for those who don't have a linux terminal, but I didn't know how to do this with the tools provided in Windows. My solution for Windows only users would be to install Ubuntu 20.04 LTS from the Microsoft Store, and follow the tutorial below with the Ubuntu terminal (you will need to enable the Windows subsystem for Linux and reboot first). Or else, you could simply SSH into a linux machine to operate the script, and bring the result back to your Windows machine.
+> Note that this is a bash script (Linux). The script must be run in a linux terminal before bringing the result back to your Windows machine. I am sorry for those who don't have a linux terminal, but I didn't know how to do this with the tools provided in Windows.
+> 
+> My solution for Windows only users would be to install Ubuntu 20.04 LTS from the Microsoft Store, and follow the tutorial below with the Ubuntu terminal (you will need to enable the Windows subsystem for Linux and reboot first).
+> 
+> Or else, you could simply SSH into a linux machine to operate the script, and bring the result back to your Windows machine.
 
-Step 1: Copy/paste this command in the terminal:
+**Step 1**: Copy/paste this command in the terminal to create the script file:
 
 ```
 nano macro_adjuster.sh
 ```
 
-Then paste these lines, and validate with `CTRL+O`, `Enter`, then `CTRL+X`:
+Then paste these lines:
 
 ```sh
 #!/bin/bash
@@ -68,7 +72,9 @@ cat line3U >> output_keys.ini
 cat line4U >> output_keys.ini
 ```
 
-Step 2: Now you need to create a copy of your keyremap.ini and rename it 'keys.ini' (I have purposefully changed it so you would not apply the script on the original .ini file, always keep backups!)
+Then, save the file with `CTRL+O`, `Enter`, and `CTRL+X`
+
+**Step 2**: Now you need to create a copy of your keyremap.ini and rename it 'keys.ini' (I have purposefully changed it so you would not apply the script on the original .ini file, always keep backups!)
 
 To do so, simply use the command below:
 
@@ -105,7 +111,7 @@ combo=1d,0,0|2a,0,0|31,0,0|31,0,1|2a,0,1|1d,0,1
 
 Then, save the file using `CTRL+O`, `Enter`, and `CTRL+X`
 
-Step 3: Now that the script and the input file are in the same folder, you can execute the script with the command below. It needs to be executed once per macro:
+**Step 3**: Now that the script and the input file are in the same folder, you can execute the script with the command below. It needs to be executed once per macro:
 
 ```
 sh macro_adjuster.sh
