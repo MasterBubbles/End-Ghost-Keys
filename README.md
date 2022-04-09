@@ -1,5 +1,5 @@
 # End-Ghost-Keys
-Putting an end the haunting ghost keys (CTRL, ALT and SHIFT) when using Oblitum's Interception
+Putting an end the haunting ghost keys (CTRL, ALT and SHIFT) when using [Oblitum's Interception](https://github.com/oblitum/Interception)
  
 The script `endghostkeys.sh` is basically a tool to edit the `keyremap.ini` from Interception, and to turn 1 macro into 2 macros:
 - The first macro will send your initial key combo when pressing down your initial key trigger ->
