@@ -101,13 +101,7 @@ combo=1d,0,0|2a,0,0|31,0,0|31,0,1|2a,0,1|1d,0,1
 
 Then, save the file using `CTRL+O`, `Enter`, and `CTRL+X`
 
-**Step 3**: Now that the script and the input file are in the same folder, you can execute the script with the command below. It needs to be executed once per macro:
-
-```
-bash ./endghostkeys.sh
-```
-
-So as in this example if you have 5 macros (which should be 20 lines in the input file), run the script 5 times:
+**Step 3**: Now that the script and the input file are in the same folder, you can execute the script with the command below. It needs to be executed once per macro, so as in this example if you have 5 macros (which should be 20 lines in the input file), run the script 5 times:
 
 ```
 bash ./endghostkeys.sh
@@ -118,6 +112,8 @@ bash ./endghostkeys.sh
 ```
 
 If you are unsure on this step, simply divide the amount of lines in `keys.ini` by 4, and it will tell you how many times you should run it.
+
+Note that it must be executed with `bash` command and not `sh` in order to work properly.
 
 # What the `output_keys.ini` file should look like
 
