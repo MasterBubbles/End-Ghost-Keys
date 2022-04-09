@@ -76,7 +76,7 @@ To do so, simply use the command below:
 nano keys.ini
 ```
 
-Then paste the content of your `keyremap.ini`, and validate with `CTRL+O`, `Enter`, then `CTRL+X`
+Then paste the full content of your `keyremap.ini` (or only specific macros, for example the ones containing CTRL, ALT or SHIFT),
 
 Here is what your `keys.ini` file should look like
 
@@ -102,6 +102,8 @@ device=HID\VID_6964&PID_0075&REV_0001&MI_00
 trigger=38,0,0
 combo=1d,0,0|2a,0,0|31,0,0|31,0,1|2a,0,1|1d,0,1
 ```
+
+Then, save the file using `CTRL+O`, `Enter`, and `CTRL+X`
 
 Step 3: Now that the script and the input file are in the same folder, you can execute the script with the command below. It needs to be executed once per macro:
 
