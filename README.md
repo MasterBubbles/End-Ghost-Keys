@@ -36,8 +36,8 @@ line3D=`head -n 1 keys.ini` && line3U=`head -n 1 keys.ini` && sed -i '1d' keys.i
 line4D=`head -n 1 keys.ini` && line4U="combo=2a,0,1|36,0,1|38,0,1|38,0,3|1d,0,1|1d,0,3" && sed -i '1d' keys.ini
 
 # Modifying the names of the 2 macros using the original name (adding _D and _U)
-line1D=`sed 's/..$//' <<< $line1D` && line1D=`sed 's/$/_D]/' <<< $line1D`
-line1U=`sed 's/..$//' <<< $line1U` && line1U=`sed 's/$/_U]/' <<< $line1U`
+line1D=`sed 's/.$//' <<< $line1D` && line1D=`sed 's/$/_D]/' <<< $line1D`
+line1U=`sed 's/.$//' <<< $line1U` && line1U=`sed 's/$/_U]/' <<< $line1U`
 
 # Replacing trigger key ID with +1 on last digit for UP event macro
 str=`sed -e 's/.*\(.\)$/\1/' <<< $line3U | tr -d $'\r'`
