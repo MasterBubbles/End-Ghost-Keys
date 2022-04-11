@@ -11,8 +11,8 @@ line1D=`sed 's/..$//' <<< $line1D` && line1D=`sed 's/$/_D]/' <<< $line1D`
 line1U=`sed 's/..$//' <<< $line1U` && line1U=`sed 's/$/_U]/' <<< $line1U`
 
 # Replacing trigger key ID with +1 on last digit for UP event macro
-str=`sed -e 's/.*\(..\)$/\1/' <<< $line3U | tr -d $'\r'`
-x=`sed 's/..$//' <<< $line3U`
+str=`sed -e 's/.*\(.\)$/\1/' <<< $line3U | tr -d $'\r'`
+x=`sed 's/.$//' <<< $line3U`
 y=`echo 1+"$str" | bc`
 line3U=`echo "$x$y"`
 
